@@ -1,30 +1,31 @@
-function BorrarCD(idParametro)
+
+function EditarCDConError1(idParametro)
 {
-	//alert(idParametro);
-		var funcionAjax=$.ajax({
-		url:"./ServidorPHP/nexo.php",
-		type:"post",
-		data:{
-			queHacer:"BorrarCD",
-			id:idParametro	
-		}
-	}).then(function(retorno){
-		Mostrar("MostrarGrilla");
-		$("#informe").html("cantidad de eliminados "+ retorno);	
-		
-	}).catch(function(retorno){	
-		$("#informe").html(retorno.responseText);	
-	});	
+	console.log("antes del form alta");
+	MostrarSinRetornarPromesa("MostrarFormAlta");
+	console.log("antes de traer los datos");
+	traerDatosAModificar(idParametro);	
+}
+function EditarCDConError2(idParametro)
+{
+	console.log("antes de traer los datos");
+	traerDatosAModificar(idParametro);	
+	console.log("antes del form alta");
+	MostrarSinRetornarPromesa("MostrarFormAlta");
+	
 }
 
-function EditarCD(idParametro)
+
+function EditarCDCorrecto(idParametro)
 {
-	MostrarRetornandoPromesa2("MostrarFormAlta")
+	MostrarRetornandoPromesa1("MostrarFormAlta")
 	.then(function(data){
 		if ( !data )
 		{
 			$("#principal").html(":(");
 			$("#informe").html("No se pudo cargar");
+			$("#error").html("faltan datos");
+
 			
 		}
 		else
@@ -44,12 +45,17 @@ function EditarCD(idParametro)
 	})
 	.catch(function(e){
 		$("#principal").html(":(");
-		$("#informe").html(e.responseText);
+		$("#informe").html("con error");
+		$("#error").html(e.responseText);
 	});
 
 	
 	
 }
+
+
+
+
 function traerDatosAModificar(idParametro)
 {
 	var funcionAjax=$.ajax({
@@ -60,7 +66,7 @@ function traerDatosAModificar(idParametro)
 			id:idParametro	
 		}
 	}).then(function(retorno){
-	
+		console.log("volvio traerDatosAModificar");
 		var cd =JSON.parse(retorno);	
 		$("#idCD").val(cd.id);
 		$("#cantante").val(cd.cantante);
@@ -74,6 +80,9 @@ function traerDatosAModificar(idParametro)
 		$("#informe").html(retorno.responseText);	
 	});	
 }
+
+
+
 function GuardarCD()
 {
 		var id=$("#idCD").val();
@@ -94,6 +103,25 @@ function GuardarCD()
 	}).then(function(retorno){
 			Mostrar("MostrarGrilla");
 		$("#informe").html("cantidad de agregados "+ retorno);	
+		
+	}).catch(function(retorno){	
+		$("#informe").html(retorno.responseText);	
+	});	
+}
+
+function BorrarCD(idParametro)
+{
+	//alert(idParametro);
+		var funcionAjax=$.ajax({
+		url:"./ServidorPHP/nexo.php",
+		type:"post",
+		data:{
+			queHacer:"BorrarCD",
+			id:idParametro	
+		}
+	}).then(function(retorno){
+		Mostrar("MostrarGrilla");
+		$("#informe").html("cantidad de eliminados "+ retorno);	
 		
 	}).catch(function(retorno){	
 		$("#informe").html(retorno.responseText);	
