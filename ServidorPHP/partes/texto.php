@@ -1,1 +1,6 @@
-	<p>Fusce ut sem est. In eu sagittis felis. In gravida arcu ut neque ornare vitae rutrum turpis vehicula. Nunc ultrices sem mollis metus rutrum non malesuada metus fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque interdum rutrum quam, a pharetra est pulvinar ac. Vestibulum congue nisl magna. Ut vulputate odio id dui convallis in adipiscing libero condimentum. Nunc et pharetra enim. Praesent pharetra, neque et luctus tempor, leo sapien faucibus leo, a dignissim turpis ipsum sed libero. Sed sed luctus purus. Aliquam faucibus turpis at libero consectetur euismod. Nam nunc lectus, congue non egestas quis, condimentum ut arcu. Nulla placerat, tortor non egestas rutrum, mi turpis adipiscing dui, et mollis turpis tortor vel orci. Cras a fringilla nunc. Suspendisse volutpat, eros congue scelerisque iaculis, magna odio sodales dui, vitae vulputate elit metus ac arcu. Mauris consequat rhoncus dolor id sagittis. Cras tortor elit, aliquet quis tincidunt eget, dignissim non tortor.</p>
+	<p><strong>1-</strong> Mostrar en el principal los datos retornados como JSON de Argentina  </p>
+	<p><strong>2-</strong> Mostrar en el principal los datos retornados como JSON de toda America  </p>
+	<p><strong>3-</strong> Mostrar en el principal si el numero random generado es positivo o negativo </p>
+	<p><strong>4-</strong> Pasar los parametros por GET para el maximo y el minimo del random </p>
+	<p><strong>5-</strong> Pasar los parametros por POST para el maximo y el minimo del random </p>
+	

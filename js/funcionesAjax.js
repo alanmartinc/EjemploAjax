@@ -170,15 +170,7 @@ function MostarRandom()
 		url:"./ServidorPHP/php/RetornarRandom.php"
 	
 	})
-	.then(function(retorno){
-		console.info(retorno);
-		$("#principal").html(retorno);
-		$("#informe").html("Correcto MostarRandom");	
-	})
-	.catch(function(retorno){
-		$("#botonesABM").html(":(");
-		$("#error").html(retorno.responseText);	
-	});
+	$("#informe").html("");
 
 }
 
