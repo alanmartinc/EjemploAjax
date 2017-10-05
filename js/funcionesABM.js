@@ -59,7 +59,8 @@ function EditarCDCorrecto(idParametro)
 function traerDatosAModificar(idParametro)
 {
 	var funcionAjax=$.ajax({
-		url:"./ServidorPHP/nexo.php",
+		//url:"./ServidorPHP/nexo.php",
+		url:"http://localhost:8080/ServidorPHP/nexo.php",
 		type:"post",
 		data:{
 			queHacer:"TraerCD",
@@ -91,7 +92,8 @@ function GuardarCD()
 		var anio=$("#anio").val();
 
 		var funcionAjax=$.ajax({
-		url:"./ServidorPHP/nexo.php",
+		//url:"./ServidorPHP/nexo.php",
+		url:"http://localhost:8080/ServidorPHP/nexo.php",
 		type:"post",
 		data:{
 			queHacer:"GuardarCD",
@@ -113,7 +115,8 @@ function BorrarCD(idParametro)
 {
 	//alert(idParametro);
 		var funcionAjax=$.ajax({
-		url:"./ServidorPHP/nexo.php",
+		//url:"./ServidorPHP/nexo.php",
+		url:"http://localhost:8080/ServidorPHP/nexo.php",
 		type:"post",
 		data:{
 			queHacer:"BorrarCD",

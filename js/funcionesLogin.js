@@ -8,7 +8,8 @@ $("#informe").html("<img src='imagenes/ajax-loader.gif' style='width: 30px;'/>")
 	
 
 	var funcionAjax=$.ajax({
-		url:"./ServidorPHP/php/validarUsuario.php",
+		//url:"./ServidorPHP/php/validarUsuario.php",
+		url:"http://localhost:8080/ServidorPHP/php/validarUsuario.php",
 		type:"post",
 		data:{
 			recordarme:recordar,
@@ -42,7 +43,7 @@ $("#informe").html("<img src='imagenes/ajax-loader.gif' style='width: 30px;'/>")
 function deslogear()
 {	
 	var funcionAjax=$.ajax({
-		url:"./ServidorPHP/php/deslogearUsuario.php",
+		url:"http://localhost:8080/ServidorPHP/php/deslogearUsuario.php",
 		type:"post"		
 	});
 	funcionAjax.then(function(retorno){
@@ -58,7 +59,7 @@ function deslogear()
 function MostarBotones()
 {		//alert(queMostrar);
 	var funcionAjax=$.ajax({
-		url:"./ServidorPHP/nexo.php",
+		url:"http://localhost:8080/ServidorPHP/nexo.php",
 		type:"post",
 		data:{queHacer:"MostarBotones"}
 	}).then(function(retorno){

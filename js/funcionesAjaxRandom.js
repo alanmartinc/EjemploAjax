@@ -6,7 +6,8 @@ function MostarRandom()
 	$("#informe").html("<img src='imagenes/ajax-loader.gif' style='width: 30px;'/>");
 	$("#error").html("");
 	var funcionAjax=$.ajax({
-		url:"./ServidorPHP/php/RetornarRandom.php"
+		//url:"./ServidorPHP/php/RetornarRandom.php"
+		url:"http://localhost:8080/ServidorPHP/php/RetornarRandom.php"
 	
 	})
 	$("#informe").html("");
@@ -19,7 +20,8 @@ function MostarRandomlimitadoGet()
 	$("#informe").html("<img src='imagenes/ajax-loader.gif' style='width: 30px;'/>");
 	$("#error").html("");
 	var funcionAjax=$.ajax({
-		url:"./ServidorPHP/php/RetornarRandomlimitadoGet.php",
+		//url:"./ServidorPHP/php/RetornarRandomlimitadoGet.php",
+		url:"http://localhost:8080/ServidorPHP/php/RetornarRandomlimitadoGet.php",
 		type:"get"
 	})
 	.then(function(retorno){
@@ -40,7 +42,8 @@ function MostarRandomlimitadoPost()
 	$("#informe").html("<img src='imagenes/ajax-loader.gif' style='width: 30px;'/>");
 	$("#error").html("");
 	var funcionAjax=$.ajax({
-		url:"./ServidorPHP/php/RetornarRandomlimitadoPost.php",
+		//url:"./ServidorPHP/php/RetornarRandomlimitadoPost.php",
+		url:"http://localhost:8080/ServidorPHP/php/RetornarRandomlimitadoPost.php",
 		type:"post"
 	})
 	.then(function(retorno){
@@ -63,7 +66,8 @@ function GuardarNumero()
 	$("#informe").html("<img src='imagenes/ajax-loader.gif' style='width: 30px;'/>");
 	$("#error").html("");
 	var funcionAjax=$.ajax({
-		url:"./ServidorPHP/php/GuardarNumero.php",
+		//url:"./ServidorPHP/php/GuardarNumero.php",
+		url:"http://localhost:8080/ServidorPHP/php/GuardarNumero.php",
 		type:"post",
 		data:{numero:10}
 	})
