@@ -18,6 +18,9 @@
 <script src="./js/jquery-3.2.1.min.js"></script>
  <link rel="icon" href="http://www.octavio.com.ar/favicon.ico">
 <script type="text/javascript" src="js/funcionesAjax.js"></script>
+<script type="text/javascript" src="js/funcionesAjaxPaises.js"></script>
+<script type="text/javascript" src="js/funcionesAjaxRandom.js"></script>
+<script type="text/javascript" src="js/funcionesCambioDeBotones.js"></script>
 <script type="text/javascript" src="js/funcionesLogin.js"></script>
 <script type="text/javascript" src="js/funcionesABM.js"></script>
 
@@ -35,19 +38,14 @@
 		</hgroup>
 
 		<nav>
+
 			<ul id="main-nav" class="clearfix">
 				<li><a onclick="MostrarError()" class="btn">Ajax<br> Error!!!</a></li>
-				<li><a onclick="MostrarSinParametros()" class="btn">Ajax<br>Sin Parametros</a> </li>
+				<li><a onclick="MostrarSinParametros()" class="btn">Ajax<br>S/Parametros</a> </li>
 				<li><a onclick="MostrarSinRetornarPromesa('foto')" class="btn">Ajax Foto<br>(parametros y POST) </a> </li>
 				<li><a onclick="MostrarSinRetornarPromesa('video')" class="btn">Ajax Video<br>(parametros y POST)</a> </li>
-				<li><a onclick="MostarPais()" class="btn">Ajax<br> Mostrar<br>Argentina</a></li>
-				<li><a onclick="MostarPaises()" class="btn">Ajax<br> Mostrar<br>paises</a></li>				
-				<li><a onclick="MostarRandom()" class="btn">Ajax<br>Random</a></li>	
-				<li><a onclick="GuardarNumero()" class="btn">Ajax<br>Guardar</a></li>	
-				<li><a onclick="MostarRandomlimitadoGet()" class="btn">Ajax<br> Random <br> limitado <br>GET</a></li>				
-				<li><a onclick="MostarRandomlimitadoPost()" class="btn">Ajax<br> Random <br>limitado<br>POST</a></li>				
-				<li><a onclick="MostrarSinRetornarPromesa('MostrarGrilla')" class="btn">Mostrar <br>Grilla<br>-Sesión-</a> </li>
-				<li><a onclick="MostarLogin()"  class="btn btn-primary"id="BotonLogin" >Login<br>-Sesión-</a> </li>
+				
+				<li><a onclick="TraerBotones(2)" class="btn btn-success">mas-></a> </li>
 				
 			</ul>
 			<!-- /#main-nav --> 
